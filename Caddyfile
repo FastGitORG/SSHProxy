@@ -1,0 +1,12 @@
+:80 {
+  gzip
+  root /var/www/ssh.fastgit.org
+  index index.html
+}
+
+ssh.fastgit.org:443 {
+  gzip
+  tls /var/www/cert/fg.pem /var/www/cert/fg.key
+  root /var/www/ssh.fastgit.org
+  index index.html
+}
